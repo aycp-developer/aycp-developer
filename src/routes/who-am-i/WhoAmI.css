@@ -1,0 +1,95 @@
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100vw);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.who-am-i {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 6vw;
+  height: 88vh;
+  width: 100vw;
+}
+.who-am-i .who-am-i-title-paragraph-container {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15.4vh;
+  height: 59%;
+  width: 42%;
+}
+.who-am-i .programmer-image-container {
+  animation-name: slideInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12vh;
+  height: 67%;
+  width: 34%;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 412px) {
+  .who-am-i {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0vh;
+  }
+  .who-am-i .who-am-i-title-paragraph-container {
+    margin-top: 5vh;
+    height: 42%;
+    width: 87%;
+  }
+  .who-am-i .programmer-image-container {
+    margin-top: 3vh;
+    height: 38%;
+    width: 87%;
+  }
+}/*# sourceMappingURL=WhoAmI.css.map */

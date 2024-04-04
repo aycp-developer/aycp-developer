@@ -1,0 +1,100 @@
+@use "../../sass/animations.scss";
+
+.formation {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 14vh;
+    height: 88vh;
+    width: 100vw;
+
+    .formation-title-paragraph-icons-container {
+        @include animations.slide-in-left-configuration();
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 11vh;
+        height: 67%;
+        width: 43%;
+
+        .formation-title-paragraph-container {
+            height: 35%;
+            width: 100%;
+        }
+
+        .icons-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 43%;
+            width: 100%;
+
+            .person-workspace-icon-container {
+                height: 98%;
+                width: 45%;
+            }
+
+            .badge-hd-icon-container {
+                height: 98%;
+                width: 45%;
+            }
+        }
+    }
+
+    .online-education-platforms-container {
+        @include animations.slide-in-right-configuration();
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 6vh;
+        height: 78%;
+        width: 34%;
+    }
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 412px) {
+    .formation {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 0vh;
+
+        .formation-title-paragraph-icons-container {
+            margin-top: 8vh;
+            height: 28%;
+            width: 87%;
+
+            .formation-title-paragraph-container {
+                height: 50%;
+                width: 100%;
+            }
+
+            .icons-container {
+                height: 50%;
+                width: 100%;
+
+                .person-workspace-icon-container {
+                    height: 76%;
+                    width: 45%;
+                }
+
+                .badge-hd-icon-container {
+                    height: 76%;
+                    width: 45%;
+                }
+            }
+        }
+
+        .online-education-platforms-container {
+            margin-top: 3.5vh;
+            height: 45%;
+            width: 87%;
+        }
+    }
+}

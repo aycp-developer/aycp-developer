@@ -1,0 +1,59 @@
+@use "../../sass/animations.scss";
+
+@mixin center-configuration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.who-am-i {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 6vw;
+    height: 88vh;
+    width: 100vw;
+
+    .who-am-i-title-paragraph-container {
+        @include animations.slide-in-left-configuration();
+        @include center-configuration();
+        flex-direction: column;
+        margin-top: 15.4vh;
+        height: 59%;
+        width: 42%;
+    }
+
+    .programmer-image-container {
+        @include animations.slide-in-right-configuration();
+        @include center-configuration();
+        margin-top: 12vh;
+        height: 67%;
+        width: 34%;
+    }
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 412px) {
+    .who-am-i {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 0vh;
+
+        .who-am-i-title-paragraph-container {
+            margin-top: 5vh;
+            height: 42%;
+            width: 87%;
+        }
+
+        .programmer-image-container {
+            margin-top: 3vh;
+            height: 38%;
+            width: 87%;
+        }
+    }
+}

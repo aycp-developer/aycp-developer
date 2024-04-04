@@ -1,0 +1,133 @@
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100vw);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2vh;
+  height: 88vh;
+  width: 100vw;
+}
+.projects .projects-title-paragraph-container {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  height: 16%;
+  width: 43%;
+}
+.projects .carousel-container {
+  animation-name: slideInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  height: 72%;
+  width: 75%;
+}
+.projects .carousel-container .no-projects-yet-loading-view-source-code-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 4vh;
+  height: 100%;
+  width: 100%;
+}
+.projects .carousel-container .no-projects-yet-loading-view-source-code-container .no-projects-yet-paragraph {
+  text-align: center;
+  font-size: 2vw;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+.projects .carousel-container .no-projects-yet-loading-view-source-code-container .loading-gif-container {
+  height: 54%;
+  width: 43%;
+}
+.projects .carousel-container .no-projects-yet-loading-view-source-code-container .view-source-code-link {
+  text-decoration: none;
+  border-style: none;
+  border-radius: 0.4rem;
+  height: 16.9%;
+  width: 100%;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 412px) {
+  .projects {
+    gap: 0vh;
+  }
+  .projects .projects-title-paragraph-container {
+    margin-top: 10.4vh;
+    height: 9%;
+    width: 87%;
+  }
+  .projects .carousel-container {
+    height: 68%;
+    width: 87%;
+  }
+  .projects .carousel-container .no-projects-yet-loading-view-source-code-container {
+    justify-content: center;
+    gap: 6.5vh;
+    height: 100%;
+    width: 100%;
+  }
+  .projects .carousel-container .no-projects-yet-loading-view-source-code-container .no-projects-yet-paragraph {
+    font-size: 3.2vw;
+    height: 9%;
+    width: 100%;
+  }
+  .projects .carousel-container .no-projects-yet-loading-view-source-code-container .loading-gif-container {
+    height: 40%;
+    width: 100%;
+  }
+  .projects .carousel-container .no-projects-yet-loading-view-source-code-container .view-source-code-link {
+    font-size: 4.5vw;
+    gap: 4.5vw;
+    height: 12.85%;
+  }
+  .projects .carousel-container .no-projects-yet-loading-view-source-code-container .view-source-code-link .eye-fill-icon-container {
+    height: 45%;
+    width: 10%;
+  }
+}/*# sourceMappingURL=Projects.css.map */

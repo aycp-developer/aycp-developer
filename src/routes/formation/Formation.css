@@ -1,0 +1,130 @@
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100vw);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.formation {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 14vh;
+  height: 88vh;
+  width: 100vw;
+}
+.formation .formation-title-paragraph-icons-container {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 11vh;
+  height: 67%;
+  width: 43%;
+}
+.formation .formation-title-paragraph-icons-container .formation-title-paragraph-container {
+  height: 35%;
+  width: 100%;
+}
+.formation .formation-title-paragraph-icons-container .icons-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 43%;
+  width: 100%;
+}
+.formation .formation-title-paragraph-icons-container .icons-container .person-workspace-icon-container {
+  height: 98%;
+  width: 45%;
+}
+.formation .formation-title-paragraph-icons-container .icons-container .badge-hd-icon-container {
+  height: 98%;
+  width: 45%;
+}
+.formation .online-education-platforms-container {
+  animation-name: slideInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 6vh;
+  height: 78%;
+  width: 34%;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 412px) {
+  .formation {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 0vh;
+  }
+  .formation .formation-title-paragraph-icons-container {
+    margin-top: 8vh;
+    height: 28%;
+    width: 87%;
+  }
+  .formation .formation-title-paragraph-icons-container .formation-title-paragraph-container {
+    height: 50%;
+    width: 100%;
+  }
+  .formation .formation-title-paragraph-icons-container .icons-container {
+    height: 50%;
+    width: 100%;
+  }
+  .formation .formation-title-paragraph-icons-container .icons-container .person-workspace-icon-container {
+    height: 76%;
+    width: 45%;
+  }
+  .formation .formation-title-paragraph-icons-container .icons-container .badge-hd-icon-container {
+    height: 76%;
+    width: 45%;
+  }
+  .formation .online-education-platforms-container {
+    margin-top: 3.5vh;
+    height: 45%;
+    width: 87%;
+  }
+}/*# sourceMappingURL=Formation.css.map */

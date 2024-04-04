@@ -1,0 +1,79 @@
+@use "../../sass/animations.scss";
+
+@mixin center-configuration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.technologies {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 88vh;
+    width: 100vw;
+
+    .technologies-title-paragraph-container {
+        @include animations.slide-in-right-configuration();
+        height: 20%;
+        width: 82%;
+    }
+
+    .tech-stack-names-tech-stacks-container {
+        @include animations.slide-in-left-configuration();
+        @include center-configuration();
+        gap: 12vw;
+        height: 78%;
+        width: 87%;
+
+        .tech-stack-names-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 80%;
+            width: 40%;
+        }
+
+        .tech-stacks-container {
+            @include center-configuration();
+            border-radius: 0.4rem;
+            height: 80%;
+            width: 40%;
+        }
+    }
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 412px) {
+    .technologies {
+        .technologies-title-paragraph-container {
+            margin-top: 1.5vh;
+            height: 16%;
+            width: 87%;
+        }
+
+        .tech-stack-names-tech-stacks-container {
+            flex-direction: column-reverse;
+            gap: 4vh;
+            margin-top: 1vh;
+            height: 78%;
+            width: 87%;
+
+            .tech-stacks-container {
+                height: 40%;
+                width: 100%;
+            }
+
+            .tech-stack-names-container {
+                height: 45%;
+                width: 100%;
+            }
+        }
+    }
+}

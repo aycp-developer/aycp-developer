@@ -1,0 +1,64 @@
+@mixin button-configuration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anta';
+    font-size: 1.4vw;
+    border-style: none;
+    border-radius: 0.4rem;
+    gap: 0.56vw;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.themes {
+    height: 100%;
+    width: 100%;
+
+    .light-theme-button {
+        @include button-configuration();
+        background-color: white;
+        color: black;
+
+        .sun-fill-icon-container {
+            height: 50%;
+            width: 20%;
+        }
+    }
+
+    .dark-theme-button {
+        @include button-configuration();
+        background-color: black;
+        color: white;
+
+        .moon-fill-icon-container {
+            height: 50%;
+            width: 20%;
+        }
+    }
+}
+
+@media (max-width: 412px) {
+    .themes {
+        .light-theme-button {
+            font-size: 4.5vw;
+            gap: 2.5vw;
+
+            .sun-fill-icon-container {
+                height: 37%;
+                width: 12%;
+            }
+        }
+
+        .dark-theme-button {
+            font-size: 4.5vw;
+            gap: 2.5vw;
+
+            .moon-fill-icon-container {
+                height: 37%;
+                width: 12%;
+            }
+        }
+    }
+}

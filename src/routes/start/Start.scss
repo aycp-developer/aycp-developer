@@ -1,0 +1,82 @@
+@mixin center-configuration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    height: 88vh;
+    width: 100vw;
+
+    .profile-picture-container {
+        margin-top: 2.8vh;
+        height: 87%;
+        width: 22%;
+    }
+
+    .start-paragraph-view-cv-download-cv-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2.8vh;
+        height: 87%;
+        width: 45%;
+
+        .start-paragraph-container {
+            text-align: center;
+            font-size: 4.5vw;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            height: 76%;
+            width: 100%;
+        }
+
+        .get-to-know-me-profile-picture-view-cv-download-cv-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 2vw;
+            height: 14%;
+            width: 100%;
+        }
+    }
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 412px) {
+    .start {
+        .profile-picture-container {
+            display: none;
+        }
+
+        .start-paragraph-view-cv-download-cv-container {
+            justify-content: start;
+            margin-top: 0;
+            height: 100%;
+            width: 100%;
+
+            .start-paragraph-container {
+                font-size: 10vw;
+                margin-top: 4.8vh;
+                height: 44%;
+                width: 92%;
+            }
+
+            .get-to-know-me-profile-picture-view-cv-download-cv-container {
+                flex-direction: column;
+                justify-content: center;
+                gap: 3.2vh;
+                margin-top: 4.3vh;
+                height: 38%;
+                width: 87%;
+            }
+        }
+    }
+}

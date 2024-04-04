@@ -1,0 +1,24 @@
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.tech-stack .svg-icon {
+  height: 10vh;
+  width: 4.6vw;
+}
+.tech-stack .font-icon {
+  font-size: 4.6vw;
+}
+
+@media (max-width: 412px) {
+  .tech-stack .svg-icon {
+    height: 4.5vh;
+    width: 10vw;
+  }
+  .tech-stack .font-icon {
+    font-size: 10vw;
+  }
+}/*# sourceMappingURL=TechStack.css.map */

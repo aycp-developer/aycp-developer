@@ -1,0 +1,29 @@
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // height: 100%;
+    width: 100%;
+
+    .svg-icon {
+        height: 10vh;
+        width: 4.6vw;
+    }
+
+    .font-icon {
+        font-size: 4.6vw;
+    }
+}
+
+@media (max-width: 412px) {
+    .tech-stack {
+        .svg-icon {
+            height: 4.5vh;
+            width: 10vw;
+        }
+        .font-icon {
+            font-size: 10vw;
+        }
+    }
+}

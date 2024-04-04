@@ -1,0 +1,150 @@
+@use "../../sass/animations.scss";
+
+@mixin center-configuration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin link-configuration {
+    text-decoration: none;
+    border-style: none;
+    border-radius: 0.4rem;
+    height: 17.95%;
+    width: 100%;
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 7.5vh;
+    height: 88vh;
+    width: 100vw;
+
+    .contact-me-title-paragraph-container {
+        @include animations.slide-in-top-configuration();
+        height: 15%;
+        width: 40%;
+    }
+
+    .icons-buttons-container {
+        @include center-configuration();
+        gap: 10vw;
+        height: 67.8%;
+        width: 100%;
+
+        .chat-right-dots-fill-icon-container {
+            @include animations.slide-in-left-configuration();
+            height: 42.53%;
+            width: 12%;
+        }
+
+        .buttons-container {
+            @include animations.slide-in-bottom-configuration();
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+            width: 38%;
+
+            .linkedin-link {
+                @include link-configuration();
+            }
+
+            .react-whatsapp {
+                background-color: rgb(67, 205, 102);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1.2vw;
+                color: white;
+                font-family: 'Anta';
+                font-size: 1.7vw;
+                border-style: none;
+                border-radius: 0.4rem;
+                padding: 0;
+                height: 17.95%;
+                width: 100%;
+
+                .whatsapp-icon-container {
+                    height: 45%;
+                    width: 10%;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.75;
+                }
+            }
+
+            .github-link {
+                @include link-configuration();
+            }
+        }
+
+        .chat-left-text-fill-icon-container {
+            @include animations.slide-in-right-configuration();
+            height: 42.53%;
+            width: 12%;
+        }
+    }
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 412px) {
+    .contact-me {
+        gap: 0vh;
+
+        .contact-me-title-paragraph-container {
+            margin-top: 5.8vh;
+            height: 9%;
+            width: 87%;
+        }
+
+        .icons-buttons-container {
+            flex-direction: column;
+            gap: 3.8vh;
+            height: 78%;
+            width: 87%;
+
+            .chat-right-dots-fill-icon-container {
+                height: 13.64%;
+                width: 45%;
+            }
+
+            .buttons-container {
+                height: 48%;
+                width: 100%;
+
+                .linkedin-link {
+                    height: 23.34%;
+                    width: 100%;
+                }
+
+                .react-whatsapp {
+                    font-size: 4.5vw;
+                    gap: 4.5vw;
+                    height: 23.34%;
+                    width: 100%;
+                }
+
+                .github-link {
+                    height: 23.34%;
+                    width: 100%;
+                }
+            }
+
+            .chat-left-text-fill-icon-container {
+                height: 13.64%;
+                width: 45%;
+            }
+        }
+    }
+}

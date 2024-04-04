@@ -1,0 +1,30 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2vw;
+    font-family: 'Anta';
+    font-size: 1.7vw;
+    border-style: none;
+    border-radius: 0.4rem;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    .icon-container {
+        height: 45%;
+        width: 10%;
+    }
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+    }
+}
+
+@media (max-width: 412px) {
+    .button {
+        font-size: 4.5vw;
+        gap: 4.5vw;
+    }
+}

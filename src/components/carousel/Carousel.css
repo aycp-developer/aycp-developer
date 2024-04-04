@@ -1,0 +1,86 @@
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  height: 100%;
+  width: 100%;
+}
+.carousel .previous-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Anta";
+  border-style: none;
+  padding: 0;
+  height: 100%;
+  width: 16.5%;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+.carousel .previous-button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.carousel .previous-button .arrow-left-short-icon-container {
+  height: 14%;
+  width: 28%;
+}
+.carousel .project-cover-container {
+  border-radius: 0.4rem;
+  height: 100%;
+  width: 67%;
+}
+.carousel .project-cover-container .project-cover {
+  height: 100%;
+  width: 100%;
+}
+.carousel .next-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Anta";
+  border-style: none;
+  padding: 0;
+  height: 100%;
+  width: 16.5%;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+.carousel .next-button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.carousel .next-button .arrow-right-short-icon-container {
+  height: 14%;
+  width: 28%;
+}
+
+@media (max-width: 412px) {
+  .carousel {
+    flex-direction: column;
+  }
+  .carousel .previous-button {
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 0.4rem;
+    height: 10%;
+    width: 100%;
+  }
+  .carousel .previous-button .arrow-left-short-icon-container {
+    height: 78%;
+    width: 10%;
+  }
+  .carousel .project-cover-container {
+    width: 100%;
+  }
+  .carousel .next-button {
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 0.4rem;
+    height: 10%;
+    width: 100%;
+  }
+  .carousel .next-button .arrow-right-short-icon-container {
+    height: 78%;
+    width: 10%;
+  }
+}/*# sourceMappingURL=Carousel.css.map */

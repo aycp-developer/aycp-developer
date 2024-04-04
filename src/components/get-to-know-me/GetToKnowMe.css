@@ -1,0 +1,57 @@
+.get-to-know-me {
+  display: none;
+}
+
+@media (max-width: 412px) {
+  .get-to-know-me {
+    background-color: cadetblue;
+    display: block;
+    border-radius: 0.4rem;
+    height: 23%;
+    width: 100%;
+  }
+  .get-to-know-me .get-to-know-me-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5vw;
+    font-family: "Anta";
+    font-size: 4.5vw;
+    letter-spacing: 0.4px;
+    border-style: none;
+    border-radius: 0.4rem;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .get-to-know-me .get-to-know-me-button .file-person-icon-container {
+    height: 37%;
+    width: 10%;
+  }
+  .get-to-know-me .x-icon-profile-picture-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Glassmorphism card effect */
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(230, 235, 242, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    flex-direction: column;
+    position: absolute;
+    top: 12%;
+    left: 0%;
+    height: 87.8%;
+    width: 99.5%;
+  }
+  .get-to-know-me .x-icon-profile-picture-container .x-icon-container {
+    border-radius: 0.4rem;
+    height: 7%;
+    width: 14%;
+  }
+  .get-to-know-me .x-icon-profile-picture-container .profile-picture-container {
+    display: block;
+    height: 78%;
+    width: 67%;
+  }
+}/*# sourceMappingURL=GetToKnowMe.css.map */

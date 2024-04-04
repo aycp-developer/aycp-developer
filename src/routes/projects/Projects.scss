@@ -1,0 +1,104 @@
+@use "../../sass/animations.scss";
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2vh;
+    height: 88vh;
+    width: 100vw;
+
+    .projects-title-paragraph-container {
+        @include animations.slide-in-left-configuration();
+        height: 16%;
+        width: 43%;
+    }
+
+    .carousel-container {
+        @include animations.slide-in-right-configuration();
+        height: 72%;
+        width: 75%;
+
+        .no-projects-yet-loading-view-source-code-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+            gap: 4vh;
+            height: 100%;
+            width: 100%;
+
+            .no-projects-yet-paragraph {
+                text-align: center;
+                font-size: 2vw;
+                letter-spacing: 0.2px;
+                margin: 0;
+            }
+
+            .loading-gif-container {
+                height: 54%;
+                width: 43%;
+            }
+
+            .view-source-code-link {
+                text-decoration: none;
+                border-style: none;
+                border-radius: 0.4rem;
+                height: 16.9%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 412px) {
+    .projects {
+        gap: 0vh;
+
+        .projects-title-paragraph-container {
+            margin-top: 10.4vh;
+            height: 9%;
+            width: 87%;
+        }
+
+        .carousel-container {
+            height: 68%;
+            width: 87%;
+
+            .no-projects-yet-loading-view-source-code-container {
+                justify-content: center;
+                gap: 6.5vh;
+                height: 100%;
+                width: 100%;
+
+                .no-projects-yet-paragraph {
+                    font-size: 3.2vw;
+                    height: 9%;
+                    width: 100%;
+                }
+
+                .loading-gif-container {
+                    height: 40%;
+                    width: 100%;
+                }
+
+                .view-source-code-link {
+                    font-size: 4.5vw;
+                    gap: 4.5vw;
+                    height: 12.85%;
+
+                    .eye-fill-icon-container {
+                        height: 45%;
+                        width: 10%;
+                    }
+                }
+            }
+        }
+    }
+}

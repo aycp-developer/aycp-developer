@@ -1,0 +1,29 @@
+.online-education-platform {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1vw;
+  border-radius: 0.4rem;
+  height: 14%;
+  width: 100%;
+}
+.online-education-platform .list-icon-container {
+  margin-left: 1vw;
+  height: 54%;
+  width: 8%;
+}
+.online-education-platform .name {
+  font-size: 2vw;
+  margin-left: 1vw;
+}
+
+@media (max-width: 412px) {
+  .online-education-platform .list-icon-container {
+    margin-left: 2vw;
+  }
+  .online-education-platform .name {
+    font-size: 3.7vw;
+    font-weight: 700;
+    margin-left: 2vw;
+  }
+}/*# sourceMappingURL=OnlineEducationPlatform.css.map */

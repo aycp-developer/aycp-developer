@@ -1,0 +1,30 @@
+.download-cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2vw;
+  font-family: "Anta";
+  font-size: 1.7vw;
+  letter-spacing: 0.4px;
+  border-style: none;
+  border-radius: 0.4rem;
+  padding: 0;
+  height: 100%;
+  width: 45%;
+}
+.download-cv .download-icon-container {
+  height: 43%;
+  width: 10%;
+}
+
+@media (max-width: 412px) {
+  .download-cv {
+    font-size: 4.5vw;
+    gap: 4.5vw;
+    height: 23%;
+    width: 100%;
+  }
+  .download-cv .download-icon-container {
+    height: 37%;
+  }
+}/*# sourceMappingURL=DownloadCV.css.map */

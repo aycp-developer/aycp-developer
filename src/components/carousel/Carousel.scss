@@ -1,0 +1,91 @@
+@mixin button-configuration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anta';
+    border-style: none;
+    padding: 0;
+    height: 100%;
+    width: 16.5%;
+
+    &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+    }
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+    height: 100%;
+    width: 100%;
+
+    .previous-button {
+        @include button-configuration();
+        border-top-left-radius: 0.4rem;
+        border-bottom-left-radius: 0.4rem;
+
+        .arrow-left-short-icon-container {
+            height: 14%;
+            width: 28%;
+        }
+    }
+
+    .project-cover-container {
+        border-radius: 0.4rem;
+        height: 100%;
+        width: 67%;
+
+        .project-cover {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .next-button {
+        @include button-configuration();
+        border-top-right-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;
+
+        .arrow-right-short-icon-container {
+            height: 14%;
+            width: 28%;
+        }
+    }
+}
+
+@media (max-width: 412px) {
+    .carousel {
+        flex-direction: column;
+
+        .previous-button {
+            border-bottom-left-radius: 0rem;
+            border-top-right-radius: 0.4rem;
+            height: 10%;
+            width: 100%;
+
+            .arrow-left-short-icon-container {
+                height: 78%;
+                width: 10%;
+            }
+        }
+
+        .project-cover-container {
+            width: 100%;
+        }
+
+        .next-button {
+            border-top-right-radius: 0rem;
+            border-bottom-left-radius: 0.4rem;
+            height: 10%;
+            width: 100%;
+
+            .arrow-right-short-icon-container {
+                height: 78%;
+                width: 10%;
+            }
+        }
+    }
+}

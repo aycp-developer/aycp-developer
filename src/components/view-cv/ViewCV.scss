@@ -1,0 +1,132 @@
+@mixin center-configuration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-configuration {
+    @include center-configuration();
+    background-color: transparent;
+    position: absolute;
+    border-style: none;
+    border-radius: 0.4rem;
+}
+
+.view-cv {
+    border-radius: 0.4rem;
+    height: 100%;
+    width: 45%;
+
+    .view-cv-button {
+        @include center-configuration();
+        gap: 1.2vw;
+        font-family: 'Anta';
+        font-size: 1.7vw;
+        letter-spacing: 0.4px;
+        border-style: none;
+        border-radius: 0.4rem;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+
+        .eye-fill-icon-container {
+            height: 43%;
+            width: 10%;
+        }
+    }
+
+    .cv-file-window-container {
+        @include center-configuration();
+        /* Glassmorphism card effect */
+        backdrop-filter: blur(10px) saturate(180%);
+        -webkit-backdrop-filter: blur(10px) saturate(180%);
+        background-color: rgba(230, 235, 242, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        overflow-y: auto;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 99.8%;
+        width: 99.9%;
+
+        .cv-image {
+            border: 0.2rem solid rgb(49, 117, 224);
+            margin-top: 31vh;
+            margin-bottom: 2vh;
+            height: 125%;
+            width: 32%;
+        }
+
+        .x-icon-container {
+            @include button-configuration();
+            top: 5%;
+            right: 2.5%;
+            height: 14%;
+            width: 7%;
+        }
+
+        .zoom-in-icon-container {
+            @include button-configuration();
+            right: 14%;
+            height: 10%;
+            width: 5%;
+        }
+
+        .zoom-out-icon-container {
+            @include button-configuration();
+            right: 80.7%;
+            height: 10%;
+            width: 5%;
+        }
+
+    }
+}
+
+@media (max-width: 412px) {
+    .view-cv {
+        height: 23%;
+        width: 100%;
+
+        .view-cv-button {
+            font-size: 4.5vw;
+            gap: 4.5vw;
+
+            .eye-fill-icon-container {
+                height: 37%;
+            }
+        }
+
+        .cv-file-window-container {
+            flex-direction: column-reverse;
+            gap: 2.5vh;
+            top: 12%;
+            left: 0%;
+            height: 87.8%;
+            width: 99.5%;
+
+            .cv-image {
+                margin-top: 0vh;
+                margin-bottom: 0vh;
+                height: 87%;
+                width: 74%;
+            }
+
+            .x-icon-container {
+                position: relative;
+                border-radius: 0.4rem;
+                top: 0%;
+                right: 0%;
+                height: 7%;
+                width: 14%;
+            }
+
+            .zoom-in-icon-container {
+                display: none;
+            }
+
+            .zoom-out-icon-container {
+                display: none;
+            }
+        }
+    }
+}

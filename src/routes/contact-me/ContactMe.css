@@ -1,0 +1,182 @@
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100vw);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.contact-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 7.5vh;
+  height: 88vh;
+  width: 100vw;
+}
+.contact-me .contact-me-title-paragraph-container {
+  animation-name: slideInTop;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  height: 15%;
+  width: 40%;
+}
+.contact-me .icons-buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+  height: 67.8%;
+  width: 100%;
+}
+.contact-me .icons-buttons-container .chat-right-dots-fill-icon-container {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  height: 42.53%;
+  width: 12%;
+}
+.contact-me .icons-buttons-container .buttons-container {
+  animation-name: slideInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 38%;
+}
+.contact-me .icons-buttons-container .buttons-container .linkedin-link {
+  text-decoration: none;
+  border-style: none;
+  border-radius: 0.4rem;
+  height: 17.95%;
+  width: 100%;
+}
+.contact-me .icons-buttons-container .buttons-container .react-whatsapp {
+  background-color: rgb(67, 205, 102);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2vw;
+  color: white;
+  font-family: "Anta";
+  font-size: 1.7vw;
+  border-style: none;
+  border-radius: 0.4rem;
+  padding: 0;
+  height: 17.95%;
+  width: 100%;
+}
+.contact-me .icons-buttons-container .buttons-container .react-whatsapp .whatsapp-icon-container {
+  height: 45%;
+  width: 10%;
+}
+.contact-me .icons-buttons-container .buttons-container .react-whatsapp:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.contact-me .icons-buttons-container .buttons-container .github-link {
+  text-decoration: none;
+  border-style: none;
+  border-radius: 0.4rem;
+  height: 17.95%;
+  width: 100%;
+}
+.contact-me .icons-buttons-container .chat-left-text-fill-icon-container {
+  animation-name: slideInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  height: 42.53%;
+  width: 12%;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 412px) {
+  .contact-me {
+    gap: 0vh;
+  }
+  .contact-me .contact-me-title-paragraph-container {
+    margin-top: 5.8vh;
+    height: 9%;
+    width: 87%;
+  }
+  .contact-me .icons-buttons-container {
+    flex-direction: column;
+    gap: 3.8vh;
+    height: 78%;
+    width: 87%;
+  }
+  .contact-me .icons-buttons-container .chat-right-dots-fill-icon-container {
+    height: 13.64%;
+    width: 45%;
+  }
+  .contact-me .icons-buttons-container .buttons-container {
+    height: 48%;
+    width: 100%;
+  }
+  .contact-me .icons-buttons-container .buttons-container .linkedin-link {
+    height: 23.34%;
+    width: 100%;
+  }
+  .contact-me .icons-buttons-container .buttons-container .react-whatsapp {
+    font-size: 4.5vw;
+    gap: 4.5vw;
+    height: 23.34%;
+    width: 100%;
+  }
+  .contact-me .icons-buttons-container .buttons-container .github-link {
+    height: 23.34%;
+    width: 100%;
+  }
+  .contact-me .icons-buttons-container .chat-left-text-fill-icon-container {
+    height: 13.64%;
+    width: 45%;
+  }
+}/*# sourceMappingURL=ContactMe.css.map */

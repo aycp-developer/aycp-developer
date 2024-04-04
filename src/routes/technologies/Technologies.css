@@ -1,0 +1,110 @@
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100vw);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInBottom {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.technologies {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 88vh;
+  width: 100vw;
+}
+.technologies .technologies-title-paragraph-container {
+  animation-name: slideInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  height: 20%;
+  width: 82%;
+}
+.technologies .tech-stack-names-tech-stacks-container {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12vw;
+  height: 78%;
+  width: 87%;
+}
+.technologies .tech-stack-names-tech-stacks-container .tech-stack-names-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80%;
+  width: 40%;
+}
+.technologies .tech-stack-names-tech-stacks-container .tech-stacks-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.4rem;
+  height: 80%;
+  width: 40%;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 412px) {
+  .technologies .technologies-title-paragraph-container {
+    margin-top: 1.5vh;
+    height: 16%;
+    width: 87%;
+  }
+  .technologies .tech-stack-names-tech-stacks-container {
+    flex-direction: column-reverse;
+    gap: 4vh;
+    margin-top: 1vh;
+    height: 78%;
+    width: 87%;
+  }
+  .technologies .tech-stack-names-tech-stacks-container .tech-stacks-container {
+    height: 40%;
+    width: 100%;
+  }
+  .technologies .tech-stack-names-tech-stacks-container .tech-stack-names-container {
+    height: 45%;
+    width: 100%;
+  }
+}/*# sourceMappingURL=Technologies.css.map */
