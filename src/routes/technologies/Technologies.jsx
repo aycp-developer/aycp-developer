@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
 import './Technologies.css';
-import { Context, TitleParagraph, TechStackName, TechStack } from '../../exports/exports';
+import { ThemeContext, TitleParagraph, TechStackName, TechStack } from '../../exports/exports';
 
 const Technologies = () => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
+    const context = useContext(ThemeContext);
+    const themeState = context.themeState.themeState;
     const technologiesParagraph = `Actualmente programo en el sistema operativo Ubuntu que es una distribución de GNU Linux, dicho esto,
     he depurado, testeado y trabajado con muchas tecnologías, pero me siento más cómodo desarrollando con las siguientes:`;
     const [isASelectedStack, setIsASelectedStack] = useState('programmingLanguages');
