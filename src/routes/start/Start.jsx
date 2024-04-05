@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import './Start.css';
-import { Context, Image, DynamicText, GetToKnowMe, ViewCV, DownloadCV } from '../../exports/exports';
+import { ThemeContext, Image, DynamicText, GetToKnowMe, ViewCV, DownloadCV } from '../../exports/exports';
 import profilePicture from '../../assets/profile-picture/profilePicture';
 import cvImage from '../../assets/cv-image/cvImage';
 
 const Start = () => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
+    const context = useContext(ThemeContext);
+    const themeState = context.themeState.themeState;
     const startParagraph = '¡Hola, me llamo Alexander Yosimar Cervantes Pineda y soy Desarrollador FullStack!';
 
     return (
