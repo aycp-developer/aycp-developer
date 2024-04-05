@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import './OnlineEducationPlatform.css';
-import { Context } from '../../exports/exports';
+import { ThemeContext } from '../../exports/exports';
 import { List } from 'react-bootstrap-icons';
 
 const OnlineEducationPlatform = ({ logo, name }) => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
+    const context = useContext(ThemeContext);
+    const themeState = context.themeState.themeState;
 
     return (
         <div
