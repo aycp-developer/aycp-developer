@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import './Formation.css';
-import { Context, TitleParagraph, OnlineEducationPlatform } from '../../exports/exports';
+import { ThemeContext, TitleParagraph, OnlineEducationPlatform } from '../../exports/exports';
 import { openbootcamp, freecodecamp, udemy, edx, youtube } from '../../assets/online-education-platforms-images/onlineEducationPlatformsImages';
 import { PersonWorkspace, BadgeHd } from 'react-bootstrap-icons';
 
 const Formation = () => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
+    const context = useContext(ThemeContext);
+    const themeState = context.themeState.themeState;
     const formationParagraph = `A lo largo de mi aprendizaje me he formado en distintas plataformas de educación en línea,
     ya que, como buen autodidacta, disfruto mucho aprender por mi propia cuenta.`;
 
