@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 import './ContactMe.css';
-import { Context, TitleParagraph, Button } from '../../exports/exports';
+import { ThemeContext, TitleParagraph, Button } from '../../exports/exports';
 import { ChatRightDotsFill, Linkedin, Whatsapp, Github, ChatLeftTextFill } from 'react-bootstrap-icons';
 import ReactWhatsapp from 'react-whatsapp';
 
 const ContactMe = () => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
+    const context = useContext(ThemeContext);
+    const themeState = context.themeState.themeState;
     const contactMeParagraph = 'Puedes contactarme a través de los siguientes medios:';
 
     return (
