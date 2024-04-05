@@ -8,7 +8,7 @@ const Start = () => {
 
     const context = useContext(Context);
     const themeState = context.state.themeState;
-    const startParagraph = '¡Hola, me llamo Alexander Yosimar Cervantes Pineda y soy Desarrollador FullStack!.';
+    const startParagraph = '¡Hola, me llamo Alexander Yosimar Cervantes Pineda y soy Desarrollador FullStack!';
 
     return (
         <div className={`start ${themeState}`}>
