@@ -1,14 +1,14 @@
 import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import './GetToKnowMe.css';
-import { Context, Image } from '../../exports/exports';
+import { ThemeContext, Image } from '../../exports/exports';
 import profilePicture from '../../assets/profile-picture/profilePicture';
 import { FilePerson, X } from 'react-bootstrap-icons';
 
 const GetToKnowMe = ({ backgroundColor, color }) => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
+    const context = useContext(ThemeContext);
+    const themeState = context.themeState.themeState;
     const [profilePictureWindow, setProfilePictureWindow] = useState(false);
 
     return (
