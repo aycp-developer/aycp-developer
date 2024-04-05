@@ -4,7 +4,6 @@
 
 @media (max-width: 412px) {
   .get-to-know-me {
-    background-color: cadetblue;
     display: block;
     border-radius: 0.4rem;
     height: 23%;
@@ -29,29 +28,33 @@
     width: 10%;
   }
   .get-to-know-me .x-icon-profile-picture-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     /* Glassmorphism card effect */
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     background-color: rgba(230, 235, 242, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: center;
     position: absolute;
-    top: 12%;
-    left: 0%;
-    height: 87.8%;
-    width: 99.5%;
+    top: 12vh;
+    left: 0vw;
+    height: 87.8vh;
+    width: 99.5vw;
   }
   .get-to-know-me .x-icon-profile-picture-container .x-icon-container {
+    position: relative;
     border-radius: 0.4rem;
+    top: 8vh;
+    right: 0vw;
     height: 7%;
     width: 14%;
   }
   .get-to-know-me .x-icon-profile-picture-container .profile-picture-container {
     display: block;
-    height: 78%;
+    margin-top: 10vh;
+    height: 68%;
     width: 67%;
   }
 }/*# sourceMappingURL=GetToKnowMe.css.map */
