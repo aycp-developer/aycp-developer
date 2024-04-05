@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import './WhoAmI.css';
-import { Context, TitleParagraph, Image } from '../../exports/exports';
+import { ThemeContext, TitleParagraph, Image } from '../../exports/exports';
 import { programmer } from '../../assets/gifs/gifs';
 
 const WhoAmI = () => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
+    const context = useContext(ThemeContext);
+    const themeState = context.themeState.themeState;
     const whoAmIParagraph = `Autodidacta, cortés y muy entusiasta por aprender. Estoy interesado en las Ciencias de la Computación
     y todo lo que gira en su órbita. Me siento fascinado con todo lo que engloba la programación web y
     el desarrollo de aplicaciones, como esta área complementa mis estudios, estoy ansioso por adquirir
