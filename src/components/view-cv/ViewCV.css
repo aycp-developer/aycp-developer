@@ -95,24 +95,24 @@
     height: 37%;
   }
   .view-cv .cv-file-window-container {
+    justify-content: start;
     flex-direction: column-reverse;
-    gap: 2.5vh;
-    top: 12%;
-    left: 0%;
-    height: 87.8%;
-    width: 99.5%;
+    top: 12vh;
+    left: 0vw;
+    height: 87.8vh;
+    width: 99.5vw;
   }
   .view-cv .cv-file-window-container .cv-image {
-    margin-top: 0vh;
+    margin-top: 7vh;
     margin-bottom: 0vh;
-    height: 87%;
+    height: 75%;
     width: 74%;
   }
   .view-cv .cv-file-window-container .x-icon-container {
     position: relative;
     border-radius: 0.4rem;
-    top: 0%;
-    right: 0%;
+    top: 5vh;
+    right: 0vw;
     height: 7%;
     width: 14%;
   }
