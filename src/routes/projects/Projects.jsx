@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import './Projects.css';
-import { Context, TitleParagraph, Carousel, Image, Button } from '../../exports/exports';
+import { ThemeContext, TitleParagraph, Carousel, Image, Button } from '../../exports/exports';
 import { EyeFill } from 'react-bootstrap-icons';
 
 const Projects = () => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
+    const context = useContext(ThemeContext);
+    const themeState = context.themeState.themeState;
     const projectsParagraph = 'Aquí puedes ver algunos de los proyectos que he realizado:';
     const carouselContainerStyles = { display: 'flex', justifyContent: 'center', alignItems: 'center' };
 
