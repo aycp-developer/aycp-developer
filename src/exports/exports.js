@@ -1,4 +1,5 @@
-import Context from '../components/context/Context';
+import ToggleNavbarContext from '../components/toggle-navbar-context/ToggleNavbarContext';
+import ThemeContext from '../components/theme-context/ThemeContext';
 import Start from '../routes/start/Start';
 import WhoAmI from '../routes/who-am-i/WhoAmI';
 import Formation from '../routes/formation/Formation';
@@ -22,7 +23,8 @@ import Carousel from '../components/carousel/Carousel';
 import ProjectCover from '../components/project-cover/ProjectCover';
 
 export {
-    Context,
+    ToggleNavbarContext,
+    ThemeContext,
     Start,
     WhoAmI,
     Formation,
