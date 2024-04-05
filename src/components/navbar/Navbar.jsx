@@ -1,14 +1,16 @@
 import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import { darkLogo, lightLogo } from '../../assets/aycp.developer-logo/aycpDeveloperLogo';
-import { Context, Themes } from '../../exports/exports';
+import { ToggleNavbarContext, ThemeContext, Themes } from '../../exports/exports';
 import { Link } from 'react-router-dom';
 import { GridFill, X } from 'react-bootstrap-icons';
 
 const Navbar = () => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
+    const toggleNavbarContext = useContext(ToggleNavbarContext);
+    const themeContext = useContext(ThemeContext);
+    const toggleNavbarDispatch = toggleNavbarContext.toggleNavbarDispatch;
+    const themeState = themeContext.themeState.themeState;
     const persistedButtonUnderlineStyle = localStorage.getItem('buttonUnderlineStyle');
     const [buttonUnderlineStyle, setButtonUnderlineStyle] = useState(persistedButtonUnderlineStyle);
     const [toggleNavbar, setToggleNavbar] = useState(false);
@@ -54,6 +56,28 @@ const Navbar = () => {
                 { textDecorationLine: 'underline', textDecorationColor: (themeState == 'dark') ? 'white' : 'black' } :
                 {}
         );
+    };
+
+    const activeToggleNavbarDispatcher = () => {
+        toggleNavbarDispatch({
+            type: 'active',
+            payload: {
+                toggleNavbar: true
+            }
+        });
+
+        setToggleNavbar(true);
+    };
+
+    const inactiveToggleNavbarDispatcher = () => {
+        toggleNavbarDispatch({
+            type: 'inactive',
+            payload: {
+                toggleNavbar: false
+            }
+        });
+
+        setToggleNavbar(false);
     };
 
     return (
@@ -103,7 +127,7 @@ const Navbar = () => {
                         (
                             <div className='grid-fill-icon-container'>
                                 <GridFill
-                                    onClick={() => setToggleNavbar(true)}
+                                    onClick={() => activeToggleNavbarDispatcher()}
                                     height='100%'
                                     width='100%'
                                 />
@@ -114,7 +138,7 @@ const Navbar = () => {
                                 <div className='mobile-navbar'>
                                     <div className='x-icon-container'>
                                         <X
-                                            onClick={() => setToggleNavbar(false)}
+                                            onClick={() => inactiveToggleNavbarDispatcher()}
                                             height='100%'
                                             width='100%'
                                         />
