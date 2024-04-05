@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
 import './Themes.css';
-import { Context } from '../../exports/exports';
+import { ThemeContext } from '../../exports/exports';
 import { MoonFill, SunFill } from 'react-bootstrap-icons';
 
 const Themes = () => {
 
-    const context = useContext(Context);
-    const themeState = context.state.themeState;
-    const dispatch = context.dispatch;
+    const context = useContext(ThemeContext);
+    const themeState = context.themeState.themeState;
+    const themeDispatch = context.themeDispatch;
 
     const lightThemeDispatcher = () => {
-        dispatch({
+        themeDispatch({
             type: 'light',
             payload: {
                 theme: 'light'
@@ -19,7 +19,7 @@ const Themes = () => {
     };
 
     const darkThemeDispatcher = () => {
-        dispatch({
+        themeDispatch({
             type: 'dark',
             payload: {
                 theme: 'dark'
