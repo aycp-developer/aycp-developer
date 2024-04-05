@@ -104,15 +104,14 @@
                     flex-direction: column;
                     justify-content: start;
                     align-items: center;
-                    gap: 9.2vh;
                     position: absolute;
-                    top: 12%;
-                    left: 0%;
-                    height: 88%;
-                    width: 100%;
+                    top: 12vh;
+                    left: 0vw;
+                    height: 88vh;
+                    width: 100vw;
 
                     .routes-container {
-                        // margin-top: 8.3vh;
+                        margin-top: 8.3vh;
 
                         .route {
                             font-size: 6.7vw;
@@ -120,9 +119,9 @@
                     }
 
                     .themes-container {
-                        // margin-top: 8vh;
+                        margin-top: 8vh;
                         height: 8.7%;
-                        width: 76%;
+                        width: 87%;
                     }
                 }
             }
