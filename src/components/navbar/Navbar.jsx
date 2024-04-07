@@ -43,11 +43,19 @@ const Navbar = () => {
         }
     ];
 
-    const persistButtonUnderlineStyle = (buttonUnderlineStyle) => {
+    const persistButtonUnderlineStyleAndInactiveToggleNavbarState = (buttonUnderlineStyle) => {
         localStorage.setItem('buttonUnderlineStyle', buttonUnderlineStyle);
         const persistedButtonUnderlineStyle = localStorage.getItem('buttonUnderlineStyle');
+
         setButtonUnderlineStyle(persistedButtonUnderlineStyle);
         setToggleNavbar(false);
+
+        toggleNavbarDispatch({
+            type: 'inactive',
+            payload: {
+                toggleNavbar: false
+            }
+        });
     };
 
     const getButtonUnderlineStyle = (buttonName) => {
@@ -85,7 +93,7 @@ const Navbar = () => {
             <div className='desktop-navbar-container'>
                 <div
                     className='root-logo-container'
-                    onClick={() => persistButtonUnderlineStyle('')}
+                    onClick={() => persistButtonUnderlineStyleAndInactiveToggleNavbarState('')}
                 >
                     <Link className='root' to='/'>
                         {
@@ -104,7 +112,7 @@ const Navbar = () => {
                         <div
                             key={index}
                             className='routes-container'
-                            onClick={() => persistButtonUnderlineStyle(item.functionValue)}
+                            onClick={() => persistButtonUnderlineStyleAndInactiveToggleNavbarState(item.functionValue)}
                             style={getButtonUnderlineStyle(item.functionValue)}
                         >
                             <Link
@@ -155,7 +163,7 @@ const Navbar = () => {
                                                 <div
                                                     key={index}
                                                     className='routes-container'
-                                                    onClick={() => persistButtonUnderlineStyle(item.functionValue)}
+                                                    onClick={() => persistButtonUnderlineStyleAndInactiveToggleNavbarState(item.functionValue)}
                                                     style={getButtonUnderlineStyle(item.functionValue)}
                                                 >
                                                     <Link
